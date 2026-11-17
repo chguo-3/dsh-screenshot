@@ -1,0 +1,4 @@
+# dsh-screenshot — 输入框截图按钮（截图 → 框选 → 作为图片附件进入草稿）
+- insert:
+    - id: dsh-screenshot
+      name: dsh-screenshot

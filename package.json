@@ -1,0 +1,65 @@
+{
+  "name": "dsh-screenshot",
+  "version": "0.7.0",
+  "type": "module",
+  "description": "DeepSeek Harness 插件：输入框里的截图按钮，直接在系统屏幕上框选、涂鸦，把选区当成图片附件放进对话草稿。",
+  "main": "index.js",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "author": "chguo-3",
+  "homepage": "https://github.com/chguo-3/dsh-screenshot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chguo-3/dsh-screenshot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chguo-3/dsh-screenshot/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "screenshot",
+    "annotation",
+    "windows"
+  ],
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "selector.ps1",
+    "cordis.patch.yml",
+    "locale/en.json",
+    "locale/zh.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
